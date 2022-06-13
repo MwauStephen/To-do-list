@@ -1,7 +1,12 @@
 import "./App.css";
+import Todo from "./Components/Todo";
 
 function App() {
-  return <div>Welcome to react js stephen</div>;
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
 }
 
 export default App;

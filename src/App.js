@@ -1,5 +1,11 @@
+import NewTodo from "./Components/NewTodo";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <NewTodo />
+    </div>
+  );
 }
 
 export default App;

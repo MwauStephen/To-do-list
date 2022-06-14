@@ -3,13 +3,15 @@ import TodoItem from "./TodoItem";
 import Card from "../UI/Card";
 import styles from "./Todo.module.css";
 
-const Todo = () => {
+const Todo = (props) => {
   //   const items = ["Node-js", "php", "react-js"];
 
   return (
     <Card className={styles.task}>
       <ul>
-        <TodoItem text="learn react-js" />
+        {props.items.map((item) => {
+          return <TodoItem text={item} />;
+        })}
       </ul>
     </Card>
   );

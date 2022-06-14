@@ -1,0 +1,10 @@
+.task {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.task ul {
+  list-style: none;
+  padding: 1rem;
+}

@@ -27,9 +27,6 @@ const NewTodo = (props) => {
     setEnteredTask(event.target.value);
   };
 
-  const buttonClickHandler = (event) => {
-    console.log(event);
-  };
   return (
     <Card className={styles.form}>
       <form onSubmit={submitHandler}>
@@ -40,9 +37,7 @@ const NewTodo = (props) => {
           onChange={addTaskHandler}
           value={enteredTask}
         />
-        <Button Onclick={buttonClickHandler}>
-          Add task
-        </Button>
+        <Button>Add task</Button>
       </form>
     </Card>
   );

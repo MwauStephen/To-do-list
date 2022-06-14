@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Button from "./Button";
 import Card from "../UI/Card";
 import styles from "./NewTodo.module.css";
 
-const NewTodo = () => {
+const NewTodo = (props) => {
   const [enteredTask, setEnteredTask] = useState("");
 
   //   submit overall form values
@@ -16,6 +17,9 @@ const NewTodo = () => {
 
     // clear user input after submission
     setEnteredTask("");
+
+    // lifting state up
+    props.onAddToDo(enteredTask);
   };
 
   //   get user input
@@ -23,6 +27,9 @@ const NewTodo = () => {
     setEnteredTask(event.target.value);
   };
 
+  const buttonClickHandler = (event) => {
+    console.log(event);
+  };
   return (
     <Card className={styles.form}>
       <form onSubmit={submitHandler}>
@@ -33,7 +40,9 @@ const NewTodo = () => {
           onChange={addTaskHandler}
           value={enteredTask}
         />
-        <button>Add task</button>
+        <Button Onclick={buttonClickHandler}>
+          Add task
+        </Button>
       </form>
     </Card>
   );

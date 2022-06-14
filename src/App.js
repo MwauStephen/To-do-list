@@ -1,12 +1,25 @@
+import React, { useState } from "react";
 import NewTodo from "./Components/NewTodo";
 import Todo from "./Components/Todo";
 
 const App = () => {
-  const todos = ["node-js", "react-js", "php"];
+  const [liftedTask, setLiftedTask] = useState([]);
+
+  const addTodoHandler = (upliftedTask) => {
+    setLiftedTask((prevTask) => {
+      return [
+        ...prevTask,
+        {
+          text: upliftedTask,
+          id: new Date().toISOString(),
+        },
+      ];
+    });
+  };
   return (
     <div>
-      <NewTodo />
-      <Todo items={todos} />
+      <NewTodo onAddToDo={addTodoHandler} />
+      <Todo items={liftedTask} />
     </div>
   );
 };

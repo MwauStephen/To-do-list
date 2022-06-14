@@ -25,20 +25,4 @@
   outline: none;
   border-color: #000;
 }
-.form button {
-  font: inherit;
-  border: 1px solid #000;
-  background: #000;
-  color: white;
-  padding: 0.25rem 1rem;
-  cursor: pointer;
-}
-.form button:hover,
-form button:active {
-  background: #8a3415;
-  border-color: #8a3415;
-}
 
-.button:focus {
-  outline: none;
-}

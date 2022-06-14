@@ -10,7 +10,7 @@ const Todo = (props) => {
     <Card className={styles.task}>
       <ul>
         {props.items.map((item) => {
-          return <TodoItem text={item} />;
+          return <TodoItem key={item.id} text={item.text} />;
         })}
       </ul>
     </Card>

@@ -1,11 +1,11 @@
-import NewTodo from "./Components/NewTodo";
+import Todo from "./Components/Todo";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <NewTodo />
+      <Todo />
     </div>
   );
-}
+};
 
 export default App;

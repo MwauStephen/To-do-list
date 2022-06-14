@@ -2,10 +2,11 @@ import NewTodo from "./Components/NewTodo";
 import Todo from "./Components/Todo";
 
 const App = () => {
+  const todos = ["node-js", "react-js", "php"];
   return (
     <div>
       <NewTodo />
-      <Todo />
+      <Todo items={todos} />
     </div>
   );
 };

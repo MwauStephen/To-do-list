@@ -34,16 +34,16 @@ const App = () => {
   //   });
   // };
 
-  const removeHandler = (taskId) => {
-    setLiftedTask((prevTask) => {
-      prevTask.filter((task) => {
-        return task.id !== taskId;
-      });
-    });
+  const removeHandler = (id) => {
+    // setLiftedTask((prevTask) => {
+    //   prevTask.filter((task) => {
+    //     return task.id !== taskId;
+    //   });
+    // });
 
-    // const newTask = liftedTask.filter((task) => task.id !== id);
-    // console.log(newTask);
-    // setLiftedTask(newTask);
+    const newTask = liftedTask.filter((task) => task.id !== id);
+    console.log(newTask);
+    setLiftedTask(newTask);
   };
 
   return (

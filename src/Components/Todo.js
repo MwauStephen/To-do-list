@@ -10,7 +10,13 @@ const Todo = (props) => {
     <Card className={styles.task}>
       <ul>
         {props.items.map((item) => {
-          return <TodoItem key={item.id} text={item.text} />;
+          return (
+            <TodoItem
+              key={item.id}
+              text={item.text}
+              onRemoveTodo={props.onRemoveTodo.bind(this, item.id)}
+            />
+          );
         })}
       </ul>
     </Card>

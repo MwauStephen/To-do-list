@@ -12,14 +12,38 @@ const App = () => {
         {
           text: upliftedTask,
           id: new Date().toISOString(),
+          // id: Math.floor(Math.random().toString()),
         },
       ];
     });
   };
+  // const addTodoHandler = (upliftedTask) => {
+  //   setLiftedTask((prevTask) => {
+  //     const newItems = {
+  //       text: upliftedTask,
+  //       id: new Date().toISOString(),
+  //     };
+  //     return prevTask.upliftedTask.concat(newItems);
+  //   });
+  // };
+
+  // const removeHandler = (id) => {
+  //   console.log("You clicked a list item");
+  //   setLiftedTask((liftedTask) => {
+  //     liftedTask.filter((task) => task.id !== id);
+  //   });
+  // };
+
+  const removeHandler = (id) => {
+    const newTask = liftedTask.filter((task) => task.id !== id);
+    console.log(newTask);
+    setLiftedTask(newTask);
+  };
+
   return (
     <div>
       <NewTodo onAddToDo={addTodoHandler} />
-      <Todo items={liftedTask} />
+      <Todo items={liftedTask} onRemoveTodo={removeHandler} />
     </div>
   );
 };
